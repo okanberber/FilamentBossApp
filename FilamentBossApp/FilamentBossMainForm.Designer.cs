@@ -61,18 +61,21 @@
             this.xMLOluşturToolStripMenuItem.Name = "xMLOluşturToolStripMenuItem";
             this.xMLOluşturToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.xMLOluşturToolStripMenuItem.Text = "XML Oluştur";
+            this.xMLOluşturToolStripMenuItem.Click += new System.EventHandler(this.xMLOluşturToolStripMenuItem_Click);
             // 
             // kategoriİşlemleriToolStripMenuItem
             // 
             this.kategoriİşlemleriToolStripMenuItem.Name = "kategoriİşlemleriToolStripMenuItem";
             this.kategoriİşlemleriToolStripMenuItem.Size = new System.Drawing.Size(110, 20);
             this.kategoriİşlemleriToolStripMenuItem.Text = "Kategori İşlemleri";
+            this.kategoriİşlemleriToolStripMenuItem.Click += new System.EventHandler(this.kategoriİşlemleriToolStripMenuItem_Click);
             // 
             // ürünİşlemleriToolStripMenuItem
             // 
             this.ürünİşlemleriToolStripMenuItem.Name = "ürünİşlemleriToolStripMenuItem";
             this.ürünİşlemleriToolStripMenuItem.Size = new System.Drawing.Size(92, 20);
             this.ürünİşlemleriToolStripMenuItem.Text = "Ürün İşlemleri";
+            this.ürünİşlemleriToolStripMenuItem.Click += new System.EventHandler(this.ürünİşlemleriToolStripMenuItem_Click);
             // 
             // FilamentBossMainForm
             // 

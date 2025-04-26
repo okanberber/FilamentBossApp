@@ -16,7 +16,7 @@ namespace FilamentBossApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new KategoriIslemleri());
+            Application.Run(new FilamentBossMainForm());
         }
     }
 }

@@ -28,19 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tb_id = new System.Windows.Forms.TextBox();
             this.tb_categoryName = new System.Windows.Forms.TextBox();
             this.tb_description = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_guncelle = new System.Windows.Forms.Button();
+            this.cb_isActive = new System.Windows.Forms.CheckBox();
             this.btn_add = new System.Windows.Forms.Button();
             this.btn_clear = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.cb_isActive = new System.Windows.Forms.CheckBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.düzenleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.silToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -53,6 +59,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(807, 267);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseClick);
             // 
             // tb_id
             // 
@@ -86,6 +93,7 @@
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.btn_guncelle);
             this.groupBox1.Controls.Add(this.cb_isActive);
             this.groupBox1.Controls.Add(this.btn_add);
             this.groupBox1.Controls.Add(this.btn_clear);
@@ -100,7 +108,27 @@
             this.groupBox1.Size = new System.Drawing.Size(805, 197);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.groupBox1.Text = "Kategori Bilgileri";
+            // 
+            // btn_guncelle
+            // 
+            this.btn_guncelle.Location = new System.Drawing.Point(492, 153);
+            this.btn_guncelle.Name = "btn_guncelle";
+            this.btn_guncelle.Size = new System.Drawing.Size(90, 23);
+            this.btn_guncelle.TabIndex = 10;
+            this.btn_guncelle.Text = "Güncelle";
+            this.btn_guncelle.UseVisualStyleBackColor = true;
+            this.btn_guncelle.Click += new System.EventHandler(this.btn_guncelle_Click);
+            // 
+            // cb_isActive
+            // 
+            this.cb_isActive.AutoSize = true;
+            this.cb_isActive.Location = new System.Drawing.Point(9, 153);
+            this.cb_isActive.Name = "cb_isActive";
+            this.cb_isActive.Size = new System.Drawing.Size(47, 17);
+            this.cb_isActive.TabIndex = 9;
+            this.cb_isActive.Text = "Aktif";
+            this.cb_isActive.UseVisualStyleBackColor = true;
             // 
             // btn_add
             // 
@@ -120,6 +148,7 @@
             this.btn_clear.TabIndex = 7;
             this.btn_clear.Text = "Formu Temizle";
             this.btn_clear.UseVisualStyleBackColor = true;
+            this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
             // 
             // label3
             // 
@@ -148,15 +177,27 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "ID:";
             // 
-            // cb_isActive
+            // contextMenuStrip1
             // 
-            this.cb_isActive.AutoSize = true;
-            this.cb_isActive.Location = new System.Drawing.Point(9, 153);
-            this.cb_isActive.Name = "cb_isActive";
-            this.cb_isActive.Size = new System.Drawing.Size(47, 17);
-            this.cb_isActive.TabIndex = 9;
-            this.cb_isActive.Text = "Aktif";
-            this.cb_isActive.UseVisualStyleBackColor = true;
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.düzenleToolStripMenuItem,
+            this.silToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(117, 48);
+            // 
+            // düzenleToolStripMenuItem
+            // 
+            this.düzenleToolStripMenuItem.Name = "düzenleToolStripMenuItem";
+            this.düzenleToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.düzenleToolStripMenuItem.Text = "Düzenle";
+            this.düzenleToolStripMenuItem.Click += new System.EventHandler(this.düzenleToolStripMenuItem_Click);
+            // 
+            // silToolStripMenuItem
+            // 
+            this.silToolStripMenuItem.Name = "silToolStripMenuItem";
+            this.silToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.silToolStripMenuItem.Text = "Sil";
+            this.silToolStripMenuItem.Click += new System.EventHandler(this.silToolStripMenuItem_Click);
             // 
             // KategoriIslemleri
             // 
@@ -171,6 +212,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -188,5 +230,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox cb_isActive;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem düzenleToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem silToolStripMenuItem;
+        private System.Windows.Forms.Button btn_guncelle;
     }
 }

@@ -3,24 +3,44 @@
   "WorkspaceRootPath": "C:\\Users\\okanb\\Desktop\\FilamentBossApp\\FilamentBossApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{29E6E5A4-FE67-49CA-B666-91C16A015438}|FilamentBossApp\\FilamentBossApp.csproj|c:\\users\\okanb\\desktop\\filamentbossapp\\filamentbossapp\\filamentbossapp\\kategoriislemleri.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{29E6E5A4-FE67-49CA-B666-91C16A015438}|FilamentBossApp\\FilamentBossApp.csproj|solutionrelative:filamentbossapp\\kategoriislemleri.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{29E6E5A4-FE67-49CA-B666-91C16A015438}|FilamentBossApp\\FilamentBossApp.csproj|c:\\users\\okanb\\desktop\\filamentbossapp\\filamentbossapp\\filamentbossapp\\urunislemleri.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{29E6E5A4-FE67-49CA-B666-91C16A015438}|FilamentBossApp\\FilamentBossApp.csproj|solutionrelative:filamentbossapp\\urunislemleri.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{90C3FE90-666B-4EBA-A2F8-DE06C3D0E2D4}|DataAccessLayer\\DataAccessLayer.csproj|c:\\users\\okanb\\desktop\\filamentbossapp\\filamentbossapp\\dataaccesslayer\\datamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{90C3FE90-666B-4EBA-A2F8-DE06C3D0E2D4}|DataAccessLayer\\DataAccessLayer.csproj|solutionrelative:dataaccesslayer\\datamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{29E6E5A4-FE67-49CA-B666-91C16A015438}|FilamentBossApp\\FilamentBossApp.csproj|c:\\users\\okanb\\desktop\\filamentbossapp\\filamentbossapp\\filamentbossapp\\kategoriislemleri.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{29E6E5A4-FE67-49CA-B666-91C16A015438}|FilamentBossApp\\FilamentBossApp.csproj|solutionrelative:filamentbossapp\\kategoriislemleri.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{29E6E5A4-FE67-49CA-B666-91C16A015438}|FilamentBossApp\\FilamentBossApp.csproj|c:\\users\\okanb\\desktop\\filamentbossapp\\filamentbossapp\\filamentbossapp\\filamentbossmainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{29E6E5A4-FE67-49CA-B666-91C16A015438}|FilamentBossApp\\FilamentBossApp.csproj|C:\\Users\\okanb\\Desktop\\FilamentBossApp\\FilamentBossApp\\filamentbossapp\\filamentbossmainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{29E6E5A4-FE67-49CA-B666-91C16A015438}|FilamentBossApp\\FilamentBossApp.csproj|solutionrelative:filamentbossapp\\filamentbossmainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{29E6E5A4-FE67-49CA-B666-91C16A015438}|FilamentBossApp\\FilamentBossApp.csproj|c:\\users\\okanb\\desktop\\filamentbossapp\\filamentbossapp\\filamentbossapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{29E6E5A4-FE67-49CA-B666-91C16A015438}|FilamentBossApp\\FilamentBossApp.csproj|C:\\Users\\okanb\\Desktop\\FilamentBossApp\\FilamentBossApp\\filamentbossapp\\filamentbossmainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29E6E5A4-FE67-49CA-B666-91C16A015438}|FilamentBossApp\\FilamentBossApp.csproj|solutionrelative:filamentbossapp\\filamentbossmainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29E6E5A4-FE67-49CA-B666-91C16A015438}|FilamentBossApp\\FilamentBossApp.csproj|C:\\Users\\okanb\\Desktop\\FilamentBossApp\\FilamentBossApp\\filamentbossapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{29E6E5A4-FE67-49CA-B666-91C16A015438}|FilamentBossApp\\FilamentBossApp.csproj|solutionrelative:filamentbossapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90C3FE90-666B-4EBA-A2F8-DE06C3D0E2D4}|DataAccessLayer\\DataAccessLayer.csproj|C:\\Users\\okanb\\Desktop\\FilamentBossApp\\FilamentBossApp\\dataaccesslayer\\products.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{90C3FE90-666B-4EBA-A2F8-DE06C3D0E2D4}|DataAccessLayer\\DataAccessLayer.csproj|solutionrelative:dataaccesslayer\\products.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90C3FE90-666B-4EBA-A2F8-DE06C3D0E2D4}|DataAccessLayer\\DataAccessLayer.csproj|C:\\Users\\okanb\\Desktop\\FilamentBossApp\\FilamentBossApp\\dataaccesslayer\\datamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{90C3FE90-666B-4EBA-A2F8-DE06C3D0E2D4}|DataAccessLayer\\DataAccessLayer.csproj|solutionrelative:dataaccesslayer\\datamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29E6E5A4-FE67-49CA-B666-91C16A015438}|FilamentBossApp\\FilamentBossApp.csproj|C:\\Users\\okanb\\Desktop\\FilamentBossApp\\FilamentBossApp\\filamentbossapp\\urunislemleri.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29E6E5A4-FE67-49CA-B666-91C16A015438}|FilamentBossApp\\FilamentBossApp.csproj|solutionrelative:filamentbossapp\\urunislemleri.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29E6E5A4-FE67-49CA-B666-91C16A015438}|FilamentBossApp\\FilamentBossApp.csproj|C:\\Users\\okanb\\Desktop\\FilamentBossApp\\FilamentBossApp\\filamentbossapp\\kategoriislemleri.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29E6E5A4-FE67-49CA-B666-91C16A015438}|FilamentBossApp\\FilamentBossApp.csproj|solutionrelative:filamentbossapp\\kategoriislemleri.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29E6E5A4-FE67-49CA-B666-91C16A015438}|FilamentBossApp\\FilamentBossApp.csproj|C:\\Users\\okanb\\Desktop\\FilamentBossApp\\FilamentBossApp\\filamentbossapp\\kategoriislemleri.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{29E6E5A4-FE67-49CA-B666-91C16A015438}|FilamentBossApp\\FilamentBossApp.csproj|solutionrelative:filamentbossapp\\kategoriislemleri.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29E6E5A4-FE67-49CA-B666-91C16A015438}|FilamentBossApp\\FilamentBossApp.csproj|C:\\Users\\okanb\\Desktop\\FilamentBossApp\\FilamentBossApp\\filamentbossapp\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{29E6E5A4-FE67-49CA-B666-91C16A015438}|FilamentBossApp\\FilamentBossApp.csproj|solutionrelative:filamentbossapp\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     }
   ],
   "DocumentGroupContainers": [
@@ -29,71 +49,127 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "DockedWidth": 1390,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DataModel.cs",
-              "DocumentMoniker": "C:\\Users\\okanb\\Desktop\\FilamentBossApp\\FilamentBossApp\\DataAccessLayer\\DataModel.cs",
-              "RelativeDocumentMoniker": "DataAccessLayer\\DataModel.cs",
-              "ToolTip": "C:\\Users\\okanb\\Desktop\\FilamentBossApp\\FilamentBossApp\\DataAccessLayer\\DataModel.cs",
-              "RelativeToolTip": "DataAccessLayer\\DataModel.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAACgAAAAIAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "UrunIslemleri.cs",
+              "DocumentMoniker": "C:\\Users\\okanb\\Desktop\\FilamentBossApp\\FilamentBossApp\\FilamentBossApp\\UrunIslemleri.cs",
+              "RelativeDocumentMoniker": "FilamentBossApp\\UrunIslemleri.cs",
+              "ToolTip": "C:\\Users\\okanb\\Desktop\\FilamentBossApp\\FilamentBossApp\\FilamentBossApp\\UrunIslemleri.cs",
+              "RelativeToolTip": "FilamentBossApp\\UrunIslemleri.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwCAAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-19T14:02:49.115Z",
+              "WhenOpened": "2025-04-23T12:13:01.679Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "KategoriIslemleri.cs",
-              "DocumentMoniker": "C:\\Users\\okanb\\Desktop\\FilamentBossApp\\FilamentBossApp\\FilamentBossApp\\KategoriIslemleri.cs",
-              "RelativeDocumentMoniker": "FilamentBossApp\\KategoriIslemleri.cs",
-              "ToolTip": "C:\\Users\\okanb\\Desktop\\FilamentBossApp\\FilamentBossApp\\FilamentBossApp\\KategoriIslemleri.cs",
-              "RelativeToolTip": "FilamentBossApp\\KategoriIslemleri.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-19T13:55:13.999Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "KategoriIslemleri.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\okanb\\Desktop\\FilamentBossApp\\FilamentBossApp\\FilamentBossApp\\KategoriIslemleri.cs",
-              "RelativeDocumentMoniker": "FilamentBossApp\\KategoriIslemleri.cs",
-              "ToolTip": "C:\\Users\\okanb\\Desktop\\FilamentBossApp\\FilamentBossApp\\FilamentBossApp\\KategoriIslemleri.cs [Design]",
-              "RelativeToolTip": "FilamentBossApp\\KategoriIslemleri.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-19T13:45:45.496Z",
-              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\okanb\\Desktop\\FilamentBossApp\\FilamentBossApp\\FilamentBossApp\\Program.cs",
+              "RelativeDocumentMoniker": "FilamentBossApp\\Program.cs",
+              "ToolTip": "C:\\Users\\okanb\\Desktop\\FilamentBossApp\\FilamentBossApp\\FilamentBossApp\\Program.cs",
+              "RelativeToolTip": "FilamentBossApp\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T12:10:55.263Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FilamentBossMainForm.cs",
+              "DocumentMoniker": "C:\\Users\\okanb\\Desktop\\FilamentBossApp\\FilamentBossApp\\FilamentBossApp\\FilamentBossMainForm.cs",
+              "RelativeDocumentMoniker": "FilamentBossApp\\FilamentBossMainForm.cs",
+              "ToolTip": "C:\\Users\\okanb\\Desktop\\FilamentBossApp\\FilamentBossApp\\FilamentBossApp\\FilamentBossMainForm.cs",
+              "RelativeToolTip": "FilamentBossApp\\FilamentBossMainForm.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB0AAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T09:31:07.184Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "FilamentBossMainForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\okanb\\Desktop\\FilamentBossApp\\FilamentBossApp\\FilamentBossApp\\FilamentBossMainForm.cs",
               "RelativeDocumentMoniker": "FilamentBossApp\\FilamentBossMainForm.cs",
               "ToolTip": "C:\\Users\\okanb\\Desktop\\FilamentBossApp\\FilamentBossApp\\FilamentBossApp\\FilamentBossMainForm.cs [Design]",
               "RelativeToolTip": "FilamentBossApp\\FilamentBossMainForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-19T11:51:38.983Z",
+              "WhenOpened": "2025-04-21T09:30:27.191Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DataModel.cs",
+              "DocumentMoniker": "C:\\Users\\okanb\\Desktop\\FilamentBossApp\\FilamentBossApp\\DataAccessLayer\\DataModel.cs",
+              "RelativeDocumentMoniker": "DataAccessLayer\\DataModel.cs",
+              "ToolTip": "C:\\Users\\okanb\\Desktop\\FilamentBossApp\\FilamentBossApp\\DataAccessLayer\\DataModel.cs",
+              "RelativeToolTip": "DataAccessLayer\\DataModel.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAgwEEAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-19T14:02:49.115Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UrunIslemleri.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\okanb\\Desktop\\FilamentBossApp\\FilamentBossApp\\FilamentBossApp\\UrunIslemleri.cs",
+              "RelativeDocumentMoniker": "FilamentBossApp\\UrunIslemleri.cs",
+              "ToolTip": "C:\\Users\\okanb\\Desktop\\FilamentBossApp\\FilamentBossApp\\FilamentBossApp\\UrunIslemleri.cs [Design]",
+              "RelativeToolTip": "FilamentBossApp\\UrunIslemleri.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T12:11:16.734Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\okanb\\Desktop\\FilamentBossApp\\FilamentBossApp\\FilamentBossApp\\Program.cs",
-              "RelativeDocumentMoniker": "FilamentBossApp\\Program.cs",
-              "ToolTip": "C:\\Users\\okanb\\Desktop\\FilamentBossApp\\FilamentBossApp\\FilamentBossApp\\Program.cs",
-              "RelativeToolTip": "FilamentBossApp\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAxAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "KategoriIslemleri.cs",
+              "DocumentMoniker": "C:\\Users\\okanb\\Desktop\\FilamentBossApp\\FilamentBossApp\\FilamentBossApp\\KategoriIslemleri.cs",
+              "RelativeDocumentMoniker": "FilamentBossApp\\KategoriIslemleri.cs",
+              "ToolTip": "C:\\Users\\okanb\\Desktop\\FilamentBossApp\\FilamentBossApp\\FilamentBossApp\\KategoriIslemleri.cs",
+              "RelativeToolTip": "FilamentBossApp\\KategoriIslemleri.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAACsAAABVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-19T10:59:41.459Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-23T12:36:21.633Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Products.cs",
+              "DocumentMoniker": "C:\\Users\\okanb\\Desktop\\FilamentBossApp\\FilamentBossApp\\DataAccessLayer\\Products.cs",
+              "RelativeDocumentMoniker": "DataAccessLayer\\Products.cs",
+              "ToolTip": "C:\\Users\\okanb\\Desktop\\FilamentBossApp\\FilamentBossApp\\DataAccessLayer\\Products.cs",
+              "RelativeToolTip": "DataAccessLayer\\Products.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T12:07:03.147Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "KategoriIslemleri.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\okanb\\Desktop\\FilamentBossApp\\FilamentBossApp\\FilamentBossApp\\KategoriIslemleri.cs",
+              "RelativeDocumentMoniker": "FilamentBossApp\\KategoriIslemleri.cs",
+              "ToolTip": "C:\\Users\\okanb\\Desktop\\FilamentBossApp\\FilamentBossApp\\FilamentBossApp\\KategoriIslemleri.cs [Design]",
+              "RelativeToolTip": "FilamentBossApp\\KategoriIslemleri.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T12:36:12.661Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "App.config",
+              "DocumentMoniker": "C:\\Users\\okanb\\Desktop\\FilamentBossApp\\FilamentBossApp\\FilamentBossApp\\App.config",
+              "RelativeDocumentMoniker": "FilamentBossApp\\App.config",
+              "ToolTip": "C:\\Users\\okanb\\Desktop\\FilamentBossApp\\FilamentBossApp\\FilamentBossApp\\App.config",
+              "RelativeToolTip": "FilamentBossApp\\App.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-04-23T14:04:32.445Z"
             }
           ]
         }
