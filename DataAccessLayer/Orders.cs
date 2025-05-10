@@ -8,16 +8,13 @@ namespace DataAccessLayer
 {
     public class Orders
     {
-        public int ID { get; set; }
-        public int ProductID { get; set; }
-        public int BrandID { get; set; }
-        public int CategoryID { get; set; }
-        public string ProductName { get; set; }
-        public string BrandName { get; set; }
-        public string CategoryName { get; set; }
-        public int Piece { get; set; }
-        public string Diameter { get; set; }
-        public string Color { get; set; }
-        public string Weigth { get; set; }
+        public string Name { get; set; }           // Ürünün adı
+        public decimal Price { get; set; }         // Ürünün fiyatı
+        public short Stock { get; set; }           // Ürünün stok durumu
+        public int Supplier_ID { get; set; }       // Tedarikçi ID'si
+        public int Category_ID { get; set; }       // Kategori ID'si
+        public int Brand_ID { get; set; }          // Marka ID'si
+        public DateTime CreationTime { get; set; } // Ürünün oluşturulma tarihi
+        public bool IsActive { get; set; }         // Ürünün aktif olup olmadığı
     }
 }

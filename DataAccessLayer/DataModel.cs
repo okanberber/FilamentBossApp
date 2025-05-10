@@ -572,7 +572,7 @@ namespace DataAccessLayer
         public bool XMLOlusturGold()
         {
             DataModel dm = new DataModel();
-            List<Products> productList = dm.UrunDoldur("SİLVER");
+            List<Products> productList = dm.UrunDoldur("GOLD");
             try
             {
                 string directoryPath = @"C:\Export";
