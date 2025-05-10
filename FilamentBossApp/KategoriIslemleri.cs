@@ -24,9 +24,9 @@ namespace FilamentBossApp
         private void btn_add_Click(object sender, EventArgs e)
         {
 
-            if (!string.IsNullOrEmpty(tb_categoryName.Text) && !string.IsNullOrEmpty(tb_description.Text)) 
+            if (!string.IsNullOrEmpty(tb_categoryName.Text)) 
                 {
-                if (dm.KategoriEkle(tb_categoryName.Text, tb_description.Text, cb_isActive.Checked))
+                if (dm.KategoriEkle(tb_categoryName.Text))
                 {
                     MessageBox.Show("Kategori Başarıyla Eklendi", "Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 } 
@@ -68,8 +68,6 @@ namespace FilamentBossApp
                 c=dm.KategoriDoldur(id.ToString());
                 tb_id.Text=c.ID.ToString();
                 tb_categoryName.Text=c.CategoryName;
-                tb_description.Text=c.Description;
-                cb_isActive.Checked = c.IsActive;
                 
             }
         }
@@ -78,7 +76,7 @@ namespace FilamentBossApp
         {
             if (!string.IsNullOrEmpty(tb_categoryName.Text)&&!string.IsNullOrEmpty(tb_id.Text))
             {
-                dm.KategoriDuzenle(tb_categoryName.Text,tb_description.Text,cb_isActive.Checked,tb_id.Text);
+                dm.KategoriDuzenle(tb_categoryName.Text,tb_id.Text);
                 MessageBox.Show("Kategori Başarıyla Güncellendi","Başarılı",MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
             dataGridView1.DataSource = dm.KategoriListele();
@@ -99,14 +97,6 @@ namespace FilamentBossApp
                 }
                     dataGridView1.DataSource = dm.KategoriListele();
             }
-        }
-
-        private void btn_clear_Click(object sender, EventArgs e)
-        {
-            tb_categoryName.Text = "";
-            cb_isActive.Checked = false;
-            tb_description.Text = "";
-            tb_id.Text = "";
         }
     }
 }

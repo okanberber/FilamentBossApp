@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer
 {
-    public class ConnectionStrings
+    public class Brands
     {
-        public static string ConStr = @"Data Source=.\SQLEXPRESS; Initial Catalog=FilamentBoss; Integrated Security=True";
+        public int ID { get; set; }
+        public string BrandName { get; set; }
     }
 }

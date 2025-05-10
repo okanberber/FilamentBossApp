@@ -1,6 +1,6 @@
 ﻿namespace FilamentBossApp
 {
-    partial class KategoriIslemleri
+    partial class MarkaIslemleri
     {
         /// <summary>
         /// Required designer variable.
@@ -30,13 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.tb_id = new System.Windows.Forms.TextBox();
-            this.tb_categoryName = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btn_guncelle = new System.Windows.Forms.Button();
-            this.btn_add = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.tb_brandID = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tb_brandName = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_add = new System.Windows.Forms.Button();
+            this.btn_update = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.düzenleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.silToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,83 +51,83 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(304, 12);
+            this.dataGridView1.Location = new System.Drawing.Point(340, 22);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(545, 362);
+            this.dataGridView1.Size = new System.Drawing.Size(481, 406);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseClick);
             // 
-            // tb_id
+            // label1
             // 
-            this.tb_id.Enabled = false;
-            this.tb_id.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tb_id.Location = new System.Drawing.Point(6, 43);
-            this.tb_id.Name = "tb_id";
-            this.tb_id.Size = new System.Drawing.Size(242, 23);
-            this.tb_id.TabIndex = 1;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(13, 29);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(21, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "ID:";
             // 
-            // tb_categoryName
+            // tb_brandID
             // 
-            this.tb_categoryName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tb_categoryName.Location = new System.Drawing.Point(6, 101);
-            this.tb_categoryName.Name = "tb_categoryName";
-            this.tb_categoryName.Size = new System.Drawing.Size(242, 23);
-            this.tb_categoryName.TabIndex = 2;
+            this.tb_brandID.Enabled = false;
+            this.tb_brandID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tb_brandID.Location = new System.Drawing.Point(16, 45);
+            this.tb_brandID.Name = "tb_brandID";
+            this.tb_brandID.Size = new System.Drawing.Size(206, 23);
+            this.tb_brandID.TabIndex = 2;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(13, 80);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(58, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Marka Adı:";
+            // 
+            // tb_brandName
+            // 
+            this.tb_brandName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tb_brandName.Location = new System.Drawing.Point(16, 96);
+            this.tb_brandName.Name = "tb_brandName";
+            this.tb_brandName.Size = new System.Drawing.Size(206, 23);
+            this.tb_brandName.TabIndex = 2;
             // 
             // groupBox1
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.groupBox1.Controls.Add(this.btn_guncelle);
+            this.groupBox1.Controls.Add(this.btn_update);
             this.groupBox1.Controls.Add(this.btn_add);
-            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.tb_brandID);
+            this.groupBox1.Controls.Add(this.tb_brandName);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.tb_id);
-            this.groupBox1.Controls.Add(this.tb_categoryName);
+            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(282, 362);
-            this.groupBox1.TabIndex = 4;
+            this.groupBox1.Size = new System.Drawing.Size(321, 416);
+            this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Kategori Bilgileri";
-            // 
-            // btn_guncelle
-            // 
-            this.btn_guncelle.Location = new System.Drawing.Point(134, 153);
-            this.btn_guncelle.Name = "btn_guncelle";
-            this.btn_guncelle.Size = new System.Drawing.Size(114, 23);
-            this.btn_guncelle.TabIndex = 10;
-            this.btn_guncelle.Text = "Güncelle";
-            this.btn_guncelle.UseVisualStyleBackColor = true;
-            this.btn_guncelle.Click += new System.EventHandler(this.btn_guncelle_Click);
+            this.groupBox1.Text = "Marka Bilgileri";
             // 
             // btn_add
             // 
-            this.btn_add.Location = new System.Drawing.Point(6, 153);
+            this.btn_add.Location = new System.Drawing.Point(16, 136);
             this.btn_add.Name = "btn_add";
-            this.btn_add.Size = new System.Drawing.Size(114, 23);
-            this.btn_add.TabIndex = 8;
-            this.btn_add.Text = "Ekle";
+            this.btn_add.Size = new System.Drawing.Size(94, 33);
+            this.btn_add.TabIndex = 3;
+            this.btn_add.Text = "EKLE";
             this.btn_add.UseVisualStyleBackColor = true;
             this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
-            // label2
+            // btn_update
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 85);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Kategori Adı:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(21, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "ID:";
+            this.btn_update.Location = new System.Drawing.Point(128, 136);
+            this.btn_update.Name = "btn_update";
+            this.btn_update.Size = new System.Drawing.Size(94, 33);
+            this.btn_update.TabIndex = 4;
+            this.btn_update.Text = "GÜNCELLE";
+            this.btn_update.UseVisualStyleBackColor = true;
+            this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
             // 
             // contextMenuStrip1
             // 
@@ -135,32 +135,32 @@
             this.düzenleToolStripMenuItem,
             this.silToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(117, 48);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 70);
             // 
             // düzenleToolStripMenuItem
             // 
             this.düzenleToolStripMenuItem.Name = "düzenleToolStripMenuItem";
-            this.düzenleToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.düzenleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.düzenleToolStripMenuItem.Text = "Düzenle";
             this.düzenleToolStripMenuItem.Click += new System.EventHandler(this.düzenleToolStripMenuItem_Click);
             // 
             // silToolStripMenuItem
             // 
             this.silToolStripMenuItem.Name = "silToolStripMenuItem";
-            this.silToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.silToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.silToolStripMenuItem.Text = "Sil";
             this.silToolStripMenuItem.Click += new System.EventHandler(this.silToolStripMenuItem_Click);
             // 
-            // KategoriIslemleri
+            // MarkaIslemleri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(861, 384);
+            this.ClientSize = new System.Drawing.Size(833, 440);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "KategoriIslemleri";
-            this.Text = "KategoriIslemleri";
-            this.Load += new System.EventHandler(this.KategoriIslemleri_Load);
+            this.Name = "MarkaIslemleri";
+            this.Text = "MarkaIslemleri";
+            this.Load += new System.EventHandler(this.MarkaIslemleri_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -172,15 +172,15 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox tb_id;
-        private System.Windows.Forms.TextBox tb_categoryName;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btn_add;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox tb_brandID;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox tb_brandName;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btn_update;
+        private System.Windows.Forms.Button btn_add;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem düzenleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem silToolStripMenuItem;
-        private System.Windows.Forms.Button btn_guncelle;
     }
 }

@@ -33,6 +33,7 @@
             this.xMLOluşturToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kategoriİşlemleriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ürünİşlemleriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.markaİşlemleriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -41,6 +42,7 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.dosyaToolStripMenuItem,
             this.kategoriİşlemleriToolStripMenuItem,
+            this.markaİşlemleriToolStripMenuItem,
             this.ürünİşlemleriToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -59,7 +61,7 @@
             // xMLOluşturToolStripMenuItem
             // 
             this.xMLOluşturToolStripMenuItem.Name = "xMLOluşturToolStripMenuItem";
-            this.xMLOluşturToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.xMLOluşturToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.xMLOluşturToolStripMenuItem.Text = "XML Oluştur";
             this.xMLOluşturToolStripMenuItem.Click += new System.EventHandler(this.xMLOluşturToolStripMenuItem_Click);
             // 
@@ -76,6 +78,13 @@
             this.ürünİşlemleriToolStripMenuItem.Size = new System.Drawing.Size(92, 20);
             this.ürünİşlemleriToolStripMenuItem.Text = "Ürün İşlemleri";
             this.ürünİşlemleriToolStripMenuItem.Click += new System.EventHandler(this.ürünİşlemleriToolStripMenuItem_Click);
+            // 
+            // markaİşlemleriToolStripMenuItem
+            // 
+            this.markaİşlemleriToolStripMenuItem.Name = "markaİşlemleriToolStripMenuItem";
+            this.markaİşlemleriToolStripMenuItem.Size = new System.Drawing.Size(99, 20);
+            this.markaİşlemleriToolStripMenuItem.Text = "Marka İşlemleri";
+            this.markaİşlemleriToolStripMenuItem.Click += new System.EventHandler(this.markaİşlemleriToolStripMenuItem_Click);
             // 
             // FilamentBossMainForm
             // 
@@ -102,5 +111,6 @@
         private System.Windows.Forms.ToolStripMenuItem xMLOluşturToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem kategoriİşlemleriToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ürünİşlemleriToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem markaİşlemleriToolStripMenuItem;
     }
 }

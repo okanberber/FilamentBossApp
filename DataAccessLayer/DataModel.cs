@@ -9,6 +9,7 @@ using System.Runtime.InteropServices;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 using System.Xml.Serialization;
 
 namespace DataAccessLayer
@@ -22,15 +23,13 @@ namespace DataAccessLayer
             con = new SqlConnection(ConnectionStrings.ConStr);
             cmd = con.CreateCommand();
         }
-        public bool KategoriEkle(string Cname,string Cdes, bool Cisactive)
+        public bool KategoriEkle(string Cname)
         {          
           try
           {
-              cmd.CommandText = "INSERT INTO Categories (CategoryName,Description,IsActive) VALUES(@name,@des,@isactive)";
+              cmd.CommandText = "INSERT INTO Categories (CategoryName) VALUES(@name)";
               cmd.Parameters.Clear();
               cmd.Parameters.AddWithValue("@name",Cname);
-              cmd.Parameters.AddWithValue("@des",Cdes);
-              cmd.Parameters.AddWithValue("@isactive",Cisactive);
               con.Open();
               cmd.ExecuteNonQuery();
               return true;
@@ -55,15 +54,11 @@ namespace DataAccessLayer
                 DataTable dt = new DataTable();
                 dt.Columns.Add("kategori No");
                 dt.Columns.Add("Kategori Isim");
-                dt.Columns.Add("Açıklama");
-                dt.Columns.Add("Aktif");
                 while (reader.Read())
                 {
                     int id = reader.GetInt32(0);
                     string name = reader.GetString(1);
-                    string description = reader.IsDBNull(2) ? "" : reader.GetString(2);
-                    bool active = reader.GetBoolean(3);
-                    dt.Rows.Add(id, name, description,active);
+                    dt.Rows.Add(id, name);
                 }
                 return dt;
             }
@@ -76,15 +71,13 @@ namespace DataAccessLayer
                 con.Close();
             }
         }
-        public bool KategoriDuzenle(string cn,string des, bool ac,string id)
+        public bool KategoriDuzenle(string cn,string id)
         {
             try
             {
-                cmd.CommandText = "UPDATE Categories SET CategoryName=@cn,Description=@des,IsActive=@ac WHERE ID=@id";
+                cmd.CommandText = "UPDATE Categories SET CategoryName=@cn WHERE ID=@id";
                 cmd.Parameters.Clear();
                 cmd.Parameters.AddWithValue("@cn", cn);
-                cmd.Parameters.AddWithValue("@des", des);
-                cmd.Parameters.AddWithValue("@ac", ac);
                 cmd.Parameters.AddWithValue("@id", id);
                 con.Open();
                 cmd.ExecuteNonQuery();
@@ -124,7 +117,7 @@ namespace DataAccessLayer
             List<Categories> list = new List<Categories>();
             try
             {
-                cmd.CommandText = "SELECT ID,CategoryName,Description,IsActive FROM Categories";
+                cmd.CommandText = "SELECT ID,CategoryName FROM Categories";
                 cmd.Parameters.Clear();
                 con.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
@@ -133,8 +126,6 @@ namespace DataAccessLayer
                     Categories c = new Categories();
                     c.ID = reader.GetInt32(0);
                     c.CategoryName = reader.GetString(1);
-                    c.Description = reader.GetString(2);
-                    c.IsActive = reader.GetBoolean(3);
                     list.Add(c);
                 }
                 return list;
@@ -153,7 +144,7 @@ namespace DataAccessLayer
             Categories c = new Categories();
             try
             {
-                cmd.CommandText = "SELECT ID,CategoryName,Description,IsActive FROM Categories WHERE ID=@id";
+                cmd.CommandText = "SELECT ID,CategoryName FROM Categories WHERE ID=@id";
                 cmd.Parameters.Clear();
                 cmd.Parameters.AddWithValue("@id", id);
                 con.Open();
@@ -162,8 +153,6 @@ namespace DataAccessLayer
                 {
                     c.ID = reader.GetInt32(0);
                     c.CategoryName = reader.GetString(1);
-                    c.Description = reader.GetString(2);
-                    c.IsActive = reader.GetBoolean(3);
                 }
                 return c;
             }
@@ -176,12 +165,154 @@ namespace DataAccessLayer
                 con.Close( );
             }
         }
+        public DataTable MarkaListele()
+        {
+            try
+            {
+                cmd.CommandText = "SELECT * FROM Brand";
+                cmd.Parameters.Clear();
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                DataTable dt = new DataTable();
+                dt.Columns.Add("Marka No");
+                dt.Columns.Add("Marka Isim");
+                while (reader.Read())
+                {
+                    int id = reader.GetInt32(0);
+                    string name = reader.GetString(1);
+                    dt.Rows.Add(id, name);
+                }
+                return dt;
+            }
+            catch
+            {
+                return null;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+        public bool MarkaEkle(string Bname)
+        {
+            try
+            {
+                cmd.CommandText = "INSERT INTO Brand (BrandName) VALUES(@name)";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@name", Bname);
+                con.Open();
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+        public bool MarkaDuzenle(string bn, string id)
+        {
+            try
+            {
+                cmd.CommandText = "UPDATE Brand SET BrandName=@cn WHERE ID=@id";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@cn", bn);
+                cmd.Parameters.AddWithValue("@id", id);
+                con.Open();
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+        public bool MarkaSil(int id)
+        {
+            try
+            {
+                cmd.CommandText = "DELETE Brand WHERE ID=@id";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@id", id);
+                con.Open();
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+        public List<Brands> MarkaDoldur()
+        {
+            List<Brands> list = new List<Brands>();
+            try
+            {
+                cmd.CommandText = "SELECT ID,BrandName FROM Brand";
+                cmd.Parameters.Clear();
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    Brands b = new Brands();
+                    b.ID = reader.GetInt32(0);
+                    b.BrandName = reader.GetString(1);
+                    list.Add(b);
+                }
+                return list;
+            }
+            catch
+            {
+                return null;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+        public Brands MarkaDoldur(string id)
+        {
+            Brands b = new Brands();
+            try
+            {
+                cmd.CommandText = "SELECT ID,BrandName FROM Brand WHERE ID=@id";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@id", id);
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    b.ID = reader.GetInt32(0);
+                    b.BrandName = reader.GetString(1);
+                }
+                return b;
+            }
+            catch
+            {
+                return null;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
         public Products UrunDoldur(int id)
         {
             Products p = new Products();
             try
             {
-                cmd.CommandText = "SELECT P.ID,P.CategoryID,C.CategoryName,P.ProductName,P.Piece,P.Price,P.Diameter,P.Color,P.Description,P.IsActive FROM Products AS P JOIN Categories AS C ON P.CategoryID = C.ID WHERE P.ID=@id";
+                cmd.CommandText = "SELECT P.ID,P.CategoryID,P.BrandID,C.CategoryName,B.BrandName,P.ProductName,P.Piece,P.Price,P.Diameter,P.Color FROM Products AS P JOIN Categories AS C ON P.CategoryID = C.ID JOIN Brand AS B ON P.BrandID = B.ID WHERE P.ID=@id";
                 cmd.Parameters.Clear();
                 cmd.Parameters.AddWithValue("@id", id);
                 con.Open();
@@ -190,14 +321,14 @@ namespace DataAccessLayer
                 {
                     p.ID = reader.GetInt32(0);
                     p.CategoryID = reader.GetInt32(1);
-                    p.CategoryName = reader.GetString (2);
-                    p.ProductName = reader.GetString(3);
-                    p.Piece=reader.GetInt32(4);
-                    p.Price = reader.GetDecimal(5);
-                    p.Diameter=reader.GetString(6);
-                    p.Color=reader.GetString(7);
-                    p.Description = reader.GetString(8);
-                    p.IsActive = reader.GetBoolean(9);
+                    p.BrandID = reader.GetInt32(2);
+                    p.CategoryName = reader.GetString (3);
+                    p.BrandName = reader.GetString (4);
+                    p.ProductName = reader.GetString(5);
+                    p.Piece=reader.GetInt32(6);
+                    p.Price = reader.GetDecimal(7);
+                    p.Diameter=reader.GetString(8);
+                    p.Color=reader.GetString(9);
                 }
                 return p;
             }
@@ -231,7 +362,7 @@ namespace DataAccessLayer
             
             try
             {
-                cmd.CommandText = "SELECT P.ID,P.CategoryID,C.CategoryName,C.Description,P.ProductName,P.Piece,P.Price,P.Diameter,P.Color,P.Description,P.IsActive FROM Products AS P JOIN Categories AS C ON P.CategoryID = C.ID";
+                cmd.CommandText = "SELECT P.ID,P.CategoryID,P.BrandID,C.CategoryName,B.BrandName,P.ProductName,P.Piece,P.Price,P.Diameter,P.Color FROM Products AS P JOIN Categories AS C ON P.CategoryID = C.ID JOIN Brand AS B ON P.BrandID = B.ID";
                 cmd.Parameters.Clear();
                 con.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
@@ -240,15 +371,14 @@ namespace DataAccessLayer
                     Products p = new Products();
                     p.ID = reader.GetInt32(0);
                     p.CategoryID = reader.GetInt32(1);
-                    p.CategoryName = reader.GetString(2);
-                    p.CategoryDescription = reader.GetString(3);
-                    p.ProductName = reader.GetString(4);
-                    p.Piece = reader.GetInt32(5);
-                    p.Price = reader.GetDecimal(6)-(reader.GetDecimal(6)*indirim)/100;
-                    p.Diameter = reader.GetString(7);
-                    p.Color = reader.GetString(8);
-                    p.Description = reader.GetString(9);
-                    p.IsActive = reader.GetBoolean(10);
+                    p.BrandID = reader.GetInt32(2);
+                    p.CategoryName = reader.GetString(3);
+                    p.BrandName = reader.GetString(4);
+                    p.ProductName = reader.GetString(5);
+                    p.Piece = reader.GetInt32(6);
+                    p.Price = reader.GetDecimal(7)-(reader.GetDecimal(7)*indirim)/100;
+                    p.Diameter = reader.GetString(8);
+                    p.Color = reader.GetString(9);
                     liste.Add(p);
                 }
                 return liste;
@@ -262,20 +392,19 @@ namespace DataAccessLayer
                 con.Close();
             }
         }
-        public bool UrunEkle(int Cid,string Pname,int Ppie,decimal Ppri,string Pdia,string Pcol, string Pdes, bool Pisactive)
+        public bool UrunEkle(int Cid,int Bid,string Pname,int Ppie,decimal Ppri,string Pdia,string Pcol)
         {
             try
             {
-                cmd.CommandText = "INSERT INTO Products (CategoryID,ProductName,Piece,Price,Diameter,Color,Description,IsActive) VALUES(@cid,@name,@pie,@pri,@dia,@col,@des,@isactive)";
+                cmd.CommandText = "INSERT INTO Products (CategoryID,BrandID,ProductName,Piece,Price,Diameter,Color) VALUES(@cid,@bid,@name,@pie,@pri,@dia,@col)";
                 cmd.Parameters.Clear();
                 cmd.Parameters.AddWithValue("@cid",Cid);
+                cmd.Parameters.AddWithValue("@bid", Bid);
                 cmd.Parameters.AddWithValue("@name", Pname);
                 cmd.Parameters.AddWithValue("@pie",Ppie);
                 cmd.Parameters.AddWithValue("@pri", Ppri);
                 cmd.Parameters.AddWithValue("@dia",Pdia);
                 cmd.Parameters.AddWithValue("@col",Pcol);
-                cmd.Parameters.AddWithValue("@des", Pdes);
-                cmd.Parameters.AddWithValue("@isactive", Pisactive);
                 con.Open();
                 cmd.ExecuteNonQuery();
                 return true;
@@ -294,34 +423,34 @@ namespace DataAccessLayer
         {
             try
             {
-                cmd.CommandText = "SELECT P.ID,P.CategoryID,C.CategoryName,P.ProductName,P.Piece,P.Price,P.Diameter,P.Color,P.Description,P.IsActive FROM Products AS P JOIN Categories AS C ON P.CategoryID = C.ID";
+                cmd.CommandText = "SELECT P.ID,P.CategoryID,P.BrandID,C.CategoryName,B.BrandName,P.ProductName,P.Piece,P.Price,P.Diameter,P.Color FROM Products AS P JOIN Categories AS C ON P.CategoryID = C.ID JOIN Brand AS B ON P.BrandID = B.ID";
                 cmd.Parameters.Clear();
                 con.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
                 DataTable dt = new DataTable();
                 dt.Columns.Add("Ürün No");
                 dt.Columns.Add("Kategori No");
+                dt.Columns.Add("Marka No");
                 dt.Columns.Add("Kategori Adı");
+                dt.Columns.Add("Marka Adı");
                 dt.Columns.Add("Ürün Adı");
                 dt.Columns.Add("Ürün Adedi");
                 dt.Columns.Add("Ürün Fiyatı");
                 dt.Columns.Add("Ürün Çapı");
                 dt.Columns.Add("Ürün Rengi");
-                dt.Columns.Add("Açıklama");
-                dt.Columns.Add("Aktif");
                 while (reader.Read())
                 {
                     int id = reader.GetInt32(0);
                     int cid = reader.GetInt32(1);
-                    string cname = reader.GetString(2);
-                    string name = reader.GetString(3);
-                    int pie = reader.GetInt32(4);
-                    decimal pri = reader.GetDecimal(5);
-                    string dia = reader.GetString(6);
-                    string col = reader.GetString(7);
-                    string description = reader.IsDBNull(8) ? "" : reader.GetString(8);
-                    bool active = reader.GetBoolean(9);
-                    dt.Rows.Add(id,cid,cname,name,pie,pri,dia,col,description,active);
+                    int bid=reader.GetInt32(2);
+                    string cname = reader.GetString(3);
+                    string bname = reader.GetString(4);
+                    string pname = reader.GetString(5);
+                    int pie = reader.GetInt32(6);
+                    decimal pri = reader.GetDecimal(7);
+                    string dia = reader.GetString(8);
+                    string col = reader.GetString(9);
+                    dt.Rows.Add(id,cid,bid,cname,bname,pname,pie,pri,dia,col);
                 }
                 return dt;
             }
@@ -334,20 +463,19 @@ namespace DataAccessLayer
                 con.Close();
             }
         }
-        public bool UrunDuzenle(int Pid,int Cid,string Pname,int Pie,decimal Pri,string Dia,string Pcol,string Des,bool IsActive)
+        public bool UrunDuzenle(int Pid,int Cid,int Bid,string Pname,int Pie,decimal Pri,string Dia,string Pcol)
         {
             try
             {
-                cmd.CommandText = "UPDATE Products SET CategoryID=@cid,ProductName=@pname,Piece=@pie,Price=@pri,Diameter=@dia,Color=@col,Description=@des,IsActive=@ac WHERE ID=@id";
+                cmd.CommandText = "UPDATE Products SET CategoryID=@cid,BrandID=@bid,ProductName=@pname,Piece=@pie,Price=@pri,Diameter=@dia,Color=@col WHERE ID=@id";
                 cmd.Parameters.Clear();
                 cmd.Parameters.AddWithValue("@cid", Cid);
+                cmd.Parameters.AddWithValue("@bid",Bid);
                 cmd.Parameters.AddWithValue("@pname",Pname);
                 cmd.Parameters.AddWithValue("@pie", Pie);
                 cmd.Parameters.AddWithValue("@pri",Pri);
                 cmd.Parameters.AddWithValue("@dia", Dia);
                 cmd.Parameters.AddWithValue("@col",Pcol);
-                cmd.Parameters.AddWithValue("@des", Des);
-                cmd.Parameters.AddWithValue("@ac", IsActive);
                 cmd.Parameters.AddWithValue("@id", Pid);
                 con.Open();
                 cmd.ExecuteNonQuery();
@@ -382,23 +510,40 @@ namespace DataAccessLayer
                 con.Close();
             }
         }
+        
         public bool XMLOlusturBronz()
         {
             DataModel dm = new DataModel();
             List<Products> productList = dm.UrunDoldur("BRONZ");
+
             try
             {
-                using (StreamWriter sw = new StreamWriter("Bronz.xml"))
+                // Hedef klasör yolu
+                string directoryPath = @"C:\Export";
+
+                // Klasör yoksa oluştur
+                if (!Directory.Exists(directoryPath))
+                {
+                    Directory.CreateDirectory(directoryPath);
+                }
+
+                // Dosya yolunu oluştur
+                string filePath = Path.Combine(directoryPath, "Bronz.xml");
+
+                // XML dosyasını yaz
+                using (StreamWriter sw = new StreamWriter(filePath))
                 {
                     XmlSerializer serializer = new XmlSerializer(typeof(List<Products>));
                     serializer.Serialize(sw, productList);
                 }
+
                 return true;
             }
             catch
             {
                 return false;
             }
+
         }
         public bool XMLOlusturSilver()
         {
@@ -406,7 +551,13 @@ namespace DataAccessLayer
             List<Products> productList = dm.UrunDoldur("SİLVER");
             try
             {
-                using (StreamWriter sw = new StreamWriter("Silver.xml"))
+                string directoryPath = @"C:\Export";
+                if (!Directory.Exists(directoryPath))
+                {
+                    Directory.CreateDirectory(directoryPath);
+                }
+                string filePath = Path.Combine(directoryPath, "Silver.xml");
+                using (StreamWriter sw = new StreamWriter(filePath))
                 {
                     XmlSerializer serializer = new XmlSerializer(typeof(List<Products>));
                     serializer.Serialize(sw, productList);
@@ -421,10 +572,16 @@ namespace DataAccessLayer
         public bool XMLOlusturGold()
         {
             DataModel dm = new DataModel();
-            List<Products> productList = dm.UrunDoldur("GOLD");
+            List<Products> productList = dm.UrunDoldur("SİLVER");
             try
             {
-                using (StreamWriter sw = new StreamWriter("Gold.xml"))
+                string directoryPath = @"C:\Export";
+                if (!Directory.Exists(directoryPath))
+                {
+                    Directory.CreateDirectory(directoryPath);
+                }
+                string filePath = Path.Combine(directoryPath, "Gold.xml");
+                using (StreamWriter sw = new StreamWriter(filePath))
                 {
                     XmlSerializer serializer = new XmlSerializer(typeof(List<Products>));
                     serializer.Serialize(sw, productList);

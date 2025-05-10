@@ -80,5 +80,26 @@ namespace FilamentBossApp
             dm.XMLOlusturGold();
             MessageBox.Show("XML Başarıyla oluşturuldu","Başarılı",MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void markaİşlemleriToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form[] acikFormlar = this.MdiChildren;
+            bool acikmi = false;
+            foreach (Form form in acikFormlar)
+            {
+                if (form.GetType() == typeof(MarkaIslemleri))
+                {
+                    acikmi = true;
+                    form.Activate();//Form Acilmissa En One Getir
+                }
+            }
+            if (acikmi == false)
+            {
+                MarkaIslemleri frm = new MarkaIslemleri();
+                frm.MdiParent = this;
+                frm.WindowState = FormWindowState.Maximized;
+                frm.Show();
+            }
+        }
     }
 }

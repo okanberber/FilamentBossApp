@@ -1,55 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfProducts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Products>
-    <ID>21</ID>
-    <CategoryID>12</CategoryID>
-    <CategoryName>PLA</CategoryName>
-    <CategoryDescription>Polylactic Acid</CategoryDescription>
-    <ProductName>Microzey</ProductName>
-    <Piece>100</Piece>
-    <Price>384.75</Price>
-    <Diameter>1.75mm</Diameter>
-    <Color>Beyaz</Color>
-    <Description>Erime sıcaklığı = 200-230</Description>
-    <IsActive>true</IsActive>
-  </Products>
-  <Products>
-    <ID>22</ID>
-    <CategoryID>12</CategoryID>
-    <CategoryName>PLA</CategoryName>
-    <CategoryDescription>Polylactic Acid</CategoryDescription>
-    <ProductName>Porima</ProductName>
-    <Piece>100</Piece>
-    <Price>775.20</Price>
-    <Diameter>1.75mm</Diameter>
-    <Color>Beyaz</Color>
-    <Description>Erime sıcaklığı = 200-230</Description>
-    <IsActive>true</IsActive>
-  </Products>
-  <Products>
-    <ID>23</ID>
-    <CategoryID>12</CategoryID>
-    <CategoryName>PLA</CategoryName>
-    <CategoryDescription>Polylactic Acid</CategoryDescription>
-    <ProductName>Esun</ProductName>
-    <Piece>50</Piece>
-    <Price>553.888</Price>
-    <Diameter>1.75mm</Diameter>
-    <Color>Beyaz</Color>
-    <Description>Erime sıcaklığı = 200-230</Description>
-    <IsActive>true</IsActive>
-  </Products>
-  <Products>
-    <ID>24</ID>
-    <CategoryID>13</CategoryID>
+    <ID>1</ID>
+    <CategoryID>5</CategoryID>
+    <BrandID>1</BrandID>
     <CategoryName>ABS</CategoryName>
-    <CategoryDescription>Acrylonitrile Butadiene Styrene</CategoryDescription>
-    <ProductName>Esun</ProductName>
-    <Piece>60</Piece>
-    <Price>1149.50</Price>
-    <Diameter>1.75mm</Diameter>
-    <Color>Siyah</Color>
-    <Description>Erime sıcaklığı = 230-250</Description>
-    <IsActive>true</IsActive>
+    <BrandName>ESUN</BrandName>
+    <ProductName>Filament</ProductName>
+    <Piece>5</Piece>
+    <Price>32.30</Price>
+    <Diameter>3</Diameter>
+    <Color>beyaz</Color>
   </Products>
 </ArrayOfProducts>

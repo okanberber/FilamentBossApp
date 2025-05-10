@@ -14,3 +14,4 @@ C:\Users\okanb\Desktop\FilamentBossApp\FilamentBossApp\FilamentBossApp\bin\Debug
 C:\Users\okanb\Desktop\FilamentBossApp\FilamentBossApp\FilamentBossApp\obj\Debug\Filament.1157AB3C.Up2Date
 C:\Users\okanb\Desktop\FilamentBossApp\FilamentBossApp\FilamentBossApp\obj\Debug\FilamentBossApp.KategoriIslemleri.resources
 C:\Users\okanb\Desktop\FilamentBossApp\FilamentBossApp\FilamentBossApp\obj\Debug\FilamentBossApp.UrunIslemleri.resources
+C:\Users\okanb\Desktop\FilamentBossApp\FilamentBossApp\FilamentBossApp\obj\Debug\FilamentBossApp.MarkaIslemleri.resources

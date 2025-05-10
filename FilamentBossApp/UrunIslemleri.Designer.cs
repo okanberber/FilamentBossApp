@@ -30,15 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.tb_price = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.tb_color = new System.Windows.Forms.TextBox();
             this.cbox_categories = new System.Windows.Forms.ComboBox();
-            this.cb_isactive = new System.Windows.Forms.CheckBox();
-            this.btn_clear = new System.Windows.Forms.Button();
             this.btn_update = new System.Windows.Forms.Button();
             this.btn_add = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.tb_description = new System.Windows.Forms.TextBox();
             this.tb_diameter = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.tb_piece = new System.Windows.Forms.TextBox();
@@ -52,8 +50,8 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.düzenleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.silToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tb_price = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.cbox_brands = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
@@ -63,17 +61,15 @@
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.cbox_brands);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.tb_price);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.tb_color);
             this.groupBox1.Controls.Add(this.cbox_categories);
-            this.groupBox1.Controls.Add(this.cb_isactive);
-            this.groupBox1.Controls.Add(this.btn_clear);
             this.groupBox1.Controls.Add(this.btn_update);
             this.groupBox1.Controls.Add(this.btn_add);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.tb_description);
             this.groupBox1.Controls.Add(this.tb_diameter);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.tb_piece);
@@ -85,15 +81,32 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(374, 505);
+            this.groupBox1.Size = new System.Drawing.Size(301, 505);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ürün Bilgileri";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(19, 273);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(29, 13);
+            this.label7.TabIndex = 8;
+            this.label7.Text = "Fiyat";
+            // 
+            // tb_price
+            // 
+            this.tb_price.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tb_price.Location = new System.Drawing.Point(22, 289);
+            this.tb_price.Name = "tb_price";
+            this.tb_price.Size = new System.Drawing.Size(250, 23);
+            this.tb_price.TabIndex = 7;
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(19, 266);
+            this.label6.Location = new System.Drawing.Point(19, 320);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(33, 13);
             this.label6.TabIndex = 8;
@@ -102,9 +115,9 @@
             // tb_color
             // 
             this.tb_color.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tb_color.Location = new System.Drawing.Point(22, 282);
+            this.tb_color.Location = new System.Drawing.Point(22, 336);
             this.tb_color.Name = "tb_color";
-            this.tb_color.Size = new System.Drawing.Size(172, 23);
+            this.tb_color.Size = new System.Drawing.Size(250, 23);
             this.tb_color.TabIndex = 7;
             // 
             // cbox_categories
@@ -113,32 +126,12 @@
             this.cbox_categories.FormattingEnabled = true;
             this.cbox_categories.Location = new System.Drawing.Point(22, 92);
             this.cbox_categories.Name = "cbox_categories";
-            this.cbox_categories.Size = new System.Drawing.Size(172, 24);
+            this.cbox_categories.Size = new System.Drawing.Size(250, 24);
             this.cbox_categories.TabIndex = 6;
-            // 
-            // cb_isactive
-            // 
-            this.cb_isactive.AutoSize = true;
-            this.cb_isactive.Location = new System.Drawing.Point(244, 239);
-            this.cb_isactive.Name = "cb_isactive";
-            this.cb_isactive.Size = new System.Drawing.Size(47, 17);
-            this.cb_isactive.TabIndex = 5;
-            this.cb_isactive.Text = "Aktif";
-            this.cb_isactive.UseVisualStyleBackColor = true;
-            // 
-            // btn_clear
-            // 
-            this.btn_clear.Location = new System.Drawing.Point(223, 139);
-            this.btn_clear.Name = "btn_clear";
-            this.btn_clear.Size = new System.Drawing.Size(128, 23);
-            this.btn_clear.TabIndex = 4;
-            this.btn_clear.Text = "FORMU TEMİZLE";
-            this.btn_clear.UseVisualStyleBackColor = true;
-            this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
             // 
             // btn_update
             // 
-            this.btn_update.Location = new System.Drawing.Point(223, 92);
+            this.btn_update.Location = new System.Drawing.Point(156, 440);
             this.btn_update.Name = "btn_update";
             this.btn_update.Size = new System.Drawing.Size(128, 23);
             this.btn_update.TabIndex = 4;
@@ -148,7 +141,7 @@
             // 
             // btn_add
             // 
-            this.btn_add.Location = new System.Drawing.Point(223, 45);
+            this.btn_add.Location = new System.Drawing.Point(22, 440);
             this.btn_add.Name = "btn_add";
             this.btn_add.Size = new System.Drawing.Size(128, 23);
             this.btn_add.TabIndex = 4;
@@ -156,37 +149,18 @@
             this.btn_add.UseVisualStyleBackColor = true;
             this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(19, 380);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(50, 13);
-            this.label8.TabIndex = 3;
-            this.label8.Text = "Açıklama";
-            // 
-            // tb_description
-            // 
-            this.tb_description.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.tb_description.Location = new System.Drawing.Point(19, 396);
-            this.tb_description.Multiline = true;
-            this.tb_description.Name = "tb_description";
-            this.tb_description.Size = new System.Drawing.Size(332, 103);
-            this.tb_description.TabIndex = 2;
-            // 
             // tb_diameter
             // 
             this.tb_diameter.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tb_diameter.Location = new System.Drawing.Point(22, 334);
+            this.tb_diameter.Location = new System.Drawing.Point(22, 388);
             this.tb_diameter.Name = "tb_diameter";
-            this.tb_diameter.Size = new System.Drawing.Size(172, 23);
+            this.tb_diameter.Size = new System.Drawing.Size(250, 23);
             this.tb_diameter.TabIndex = 1;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(19, 318);
+            this.label5.Location = new System.Drawing.Point(19, 372);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(26, 13);
             this.label5.TabIndex = 0;
@@ -195,16 +169,16 @@
             // tb_piece
             // 
             this.tb_piece.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tb_piece.Location = new System.Drawing.Point(22, 186);
+            this.tb_piece.Location = new System.Drawing.Point(22, 240);
             this.tb_piece.Name = "tb_piece";
-            this.tb_piece.Size = new System.Drawing.Size(172, 23);
+            this.tb_piece.Size = new System.Drawing.Size(250, 23);
             this.tb_piece.TabIndex = 1;
             this.tb_piece.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_piece_KeyPress);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(19, 170);
+            this.label4.Location = new System.Drawing.Point(19, 224);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(29, 13);
             this.label4.TabIndex = 0;
@@ -213,15 +187,15 @@
             // tb_productname
             // 
             this.tb_productname.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tb_productname.Location = new System.Drawing.Point(22, 139);
+            this.tb_productname.Location = new System.Drawing.Point(22, 193);
             this.tb_productname.Name = "tb_productname";
-            this.tb_productname.Size = new System.Drawing.Size(172, 23);
+            this.tb_productname.Size = new System.Drawing.Size(250, 23);
             this.tb_productname.TabIndex = 1;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(19, 123);
+            this.label3.Location = new System.Drawing.Point(19, 177);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(48, 13);
             this.label3.TabIndex = 0;
@@ -242,7 +216,7 @@
             this.tb_productid.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.tb_productid.Location = new System.Drawing.Point(22, 45);
             this.tb_productid.Name = "tb_productid";
-            this.tb_productid.Size = new System.Drawing.Size(172, 23);
+            this.tb_productid.Size = new System.Drawing.Size(250, 23);
             this.tb_productid.TabIndex = 1;
             // 
             // label1
@@ -260,9 +234,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(402, 21);
+            this.dataGridView1.Location = new System.Drawing.Point(319, 21);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(649, 504);
+            this.dataGridView1.Size = new System.Drawing.Size(732, 496);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseClick);
             // 
@@ -288,22 +262,23 @@
             this.silToolStripMenuItem.Text = "Sil";
             this.silToolStripMenuItem.Click += new System.EventHandler(this.silToolStripMenuItem_Click);
             // 
-            // tb_price
+            // cbox_brands
             // 
-            this.tb_price.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tb_price.Location = new System.Drawing.Point(22, 235);
-            this.tb_price.Name = "tb_price";
-            this.tb_price.Size = new System.Drawing.Size(172, 23);
-            this.tb_price.TabIndex = 7;
+            this.cbox_brands.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cbox_brands.FormattingEnabled = true;
+            this.cbox_brands.Location = new System.Drawing.Point(22, 142);
+            this.cbox_brands.Name = "cbox_brands";
+            this.cbox_brands.Size = new System.Drawing.Size(250, 24);
+            this.cbox_brands.TabIndex = 9;
             // 
-            // label7
+            // label8
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(19, 219);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(29, 13);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "Fiyat";
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(19, 126);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(37, 13);
+            this.label8.TabIndex = 10;
+            this.label8.Text = "Marka";
             // 
             // UrunIslemleri
             // 
@@ -335,20 +310,18 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox tb_piece;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button btn_clear;
         private System.Windows.Forms.Button btn_update;
         private System.Windows.Forms.Button btn_add;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox tb_description;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem düzenleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem silToolStripMenuItem;
-        private System.Windows.Forms.CheckBox cb_isactive;
         private System.Windows.Forms.ComboBox cbox_categories;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox tb_color;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox tb_price;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox cbox_brands;
     }
 }

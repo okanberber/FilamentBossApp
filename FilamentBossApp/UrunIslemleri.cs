@@ -23,24 +23,33 @@ namespace FilamentBossApp
         private void UrunIslemleri_Load(object sender, EventArgs e)
         {
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            List<Categories> list = new List<Categories>();
-            list = dm.KategoriDoldur();
-            foreach (var item in list)
+            List<Categories> clist = new List<Categories>();
+            clist = dm.KategoriDoldur();
+            foreach (var item in clist)
             {
                 cbox_categories.Items.Add(item.CategoryName);
             }
             cbox_categories.SelectedIndex = 0;
+            List<Brands> blist = new List<Brands>();
+            blist = dm.MarkaDoldur();
+            foreach (var item in blist)
+            {
+                cbox_brands.Items.Add(item.BrandName);
+            }
+            cbox_brands.SelectedIndex = 0;
             dataGridView1.DataSource = dm.UrunListele();
             
         }
 
         private void btn_add_Click(object sender, EventArgs e)
         {
-            List<Categories> list = new List<Categories>();
-            list = dm.KategoriDoldur();
-            if (!string.IsNullOrEmpty(cbox_categories.Text) && !string.IsNullOrEmpty(tb_productname.Text) && !string.IsNullOrEmpty(tb_piece.Text)&&!string.IsNullOrEmpty(tb_price.Text) && !string.IsNullOrEmpty(tb_diameter.Text) && !string.IsNullOrEmpty(tb_color.Text) && !string.IsNullOrEmpty(tb_description.Text))
+            List<Categories> listc = new List<Categories>();
+            listc = dm.KategoriDoldur();
+            List<Brands> listb = new List<Brands>();
+            listb = dm.MarkaDoldur();
+            if (!string.IsNullOrEmpty(cbox_categories.Text) && !string.IsNullOrEmpty(tb_productname.Text) && !string.IsNullOrEmpty(tb_piece.Text)&&!string.IsNullOrEmpty(tb_price.Text) && !string.IsNullOrEmpty(tb_diameter.Text) && !string.IsNullOrEmpty(tb_color.Text))
             {
-                if (dm.UrunEkle(list[cbox_categories.SelectedIndex].ID, tb_productname.Text, Convert.ToInt32(tb_piece.Text),Convert.ToDecimal(tb_price.Text), tb_diameter.Text, tb_color.Text, tb_description.Text, cb_isactive.Checked))
+                if (dm.UrunEkle(listc[cbox_categories.SelectedIndex].ID,listb[cbox_brands.SelectedIndex].ID,tb_productname.Text, Convert.ToInt32(tb_piece.Text),Convert.ToDecimal(tb_price.Text), tb_diameter.Text, tb_color.Text))
                 {
                     MessageBox.Show("Ürün Başarıyla Eklendi", "Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -81,19 +90,18 @@ namespace FilamentBossApp
                 tb_price.Text = p.Price.ToString();
                 tb_diameter.Text = p.Diameter;
                 tb_color.Text = p.Color;
-                tb_description.Text = p.Description;
-                cb_isactive.Checked = p.IsActive;
             }
         }
 
         private void btn_update_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(cbox_categories.Text) && !string.IsNullOrEmpty(tb_productname.Text) && !string.IsNullOrEmpty(tb_piece.Text) && !string.IsNullOrEmpty(tb_price.Text) && !string.IsNullOrEmpty(tb_diameter.Text) && !string.IsNullOrEmpty(tb_color.Text) && !string.IsNullOrEmpty(tb_description.Text))
+            if (!string.IsNullOrEmpty(cbox_categories.Text) && !string.IsNullOrEmpty(tb_productname.Text) && !string.IsNullOrEmpty(tb_piece.Text) && !string.IsNullOrEmpty(tb_price.Text) && !string.IsNullOrEmpty(tb_diameter.Text) && !string.IsNullOrEmpty(tb_color.Text))
             {
                 List<Categories> list = new List<Categories>();
                 list = dm.KategoriDoldur();
-
-                dm.UrunDuzenle(Convert.ToInt32(tb_productid.Text),list[cbox_categories.SelectedIndex].ID,tb_productname.Text,Convert.ToInt32(tb_piece.Text),Convert.ToDecimal(tb_price.Text),tb_diameter.Text,tb_color.Text, tb_description.Text,cb_isactive.Checked);
+                List<Brands> listb = new List<Brands>();
+                listb = dm.MarkaDoldur();
+                dm.UrunDuzenle(Convert.ToInt32(tb_productid.Text),list[cbox_categories.SelectedIndex].ID, listb[cbox_brands.SelectedIndex].ID,tb_productname.Text,Convert.ToInt32(tb_piece.Text),Convert.ToDecimal(tb_price.Text),tb_diameter.Text,tb_color.Text);
                 MessageBox.Show("Ürün Başarıyla Güncellendi", "Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             dataGridView1.DataSource = dm.UrunListele();
@@ -114,10 +122,8 @@ namespace FilamentBossApp
             tb_productid.Text = string.Empty;
             tb_piece.Text = string.Empty;
             tb_price.Text = string.Empty;
-            cb_isactive.Checked = false;
             tb_diameter.Text = string.Empty;
             tb_color.Text = string.Empty;
-            tb_description.Text = string.Empty;
             tb_productname.Text = string.Empty;
         }
 
